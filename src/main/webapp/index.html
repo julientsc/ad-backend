@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+<head>
+<title>Application</title>
+
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+
+
+<script type="text/javascript">
+	var myApp = angular.module('myApp', [ 'ngRoute' ]);
+
+	
+</script>
+</head>
+
+
+<body>
+	<h1>My Application</h1>
+ 	
+	<a href="#/">Home</a> 
+	<a ng-if="token == null" href="#/login">login</a>
+	<a ng-if="token" href="#/products">Products</a> 
+	<a ng-if="token" href="#/campaigns">Campaigns</a> 
+	<a ng-if="token" href="#/account">Account</a> 
+
+	<div ng-view></div>
+
+</body>
+
+<script type="text/javascript" src="js/route.js"></script>
+<script type="text/javascript" src="js/controller.js"></script>
+
+</html>

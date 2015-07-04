@@ -1,0 +1,8 @@
+<h2 ng-init="init()">Campaigns</h2>
+
+<button ng-click="addCampaign()">Add</button>
+
+<div ng-repeat="campaign in campaigns">
+	{{campaign.id}}
+	<button ng-click="removeCampaign(campaign.id)">Remove</button>
+</div>

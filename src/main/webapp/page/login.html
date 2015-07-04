@@ -1,0 +1,18 @@
+<h2 ng-init="init()">Login</h2>
+
+	
+	<div ng-if="token">
+		<button ng-click="logout()">Logout</button>
+		<button ng-click="removeUser(token.userId)">Remove</button>
+		{{token.userId}}
+	</div>
+	
+	<div ng-if="token == null">
+		<button ng-click="addUser()">Add</button>
+		<div ng-repeat="user in users">
+			{{user.id}}
+			<button ng-click="removeUser(user.id)"">Remove</button>
+			<button ng-click="login(user.id)"">Login</button>
+		</div>
+	</div>
+</div>
